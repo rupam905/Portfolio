@@ -1,6 +1,8 @@
-import React from 'react'
+import React from "react";
 
 const About = () => {
+  const frontendSkills = ["React", "TailwindCSS"];
+  const backendSkills = ["Node.js", "Express.js"];
   return (
     <section id='about' className='min-h-[calc(100vh-150px)] flex justify-center items-center flex-col bg-gray-50'>
         <div className='max-w-5xl p-16 '>
@@ -32,7 +34,7 @@ const About = () => {
             </div>
         </div>
     </section>
-  )
-}
+  );
+};
 
-export default About
+export default About;
