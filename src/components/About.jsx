@@ -6,7 +6,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="min-h-[calc(100vh-150px)] flex justify-center items-center flex-col bg-gray-50">
+      className="py-6 flex justify-center items-center flex-col bg-gray-50">
       <div className="max-w-3xl px-4 mx-auto">
         <h2 className="font-bold text-4xl text-center text-blue-950">
           About me
@@ -18,7 +18,7 @@ const About = () => {
             applications and creating innovative solutions.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="rounded-xl p-6 border shadow hover:border-blue-300 transition-all ">
+            <div className="rounded-xl p-6 border shadow hover:border-blue-300 transition-all bg-white">
               <h3 className="text-xl font-bold mb-4"> Frontend</h3>
               <div className="flex flex-wrap gap-2 justify-center">
                 {frontendSkills.map((tech, key) => (
@@ -32,7 +32,7 @@ const About = () => {
                 ))}
               </div>
             </div>
-            <div className="rounded-xl p-6 border shadow hover:border-blue-300 transition-all">
+            <div className="rounded-xl p-6 border shadow hover:border-blue-300 transition-all bg-white">
                 <h3 className="text-xl font-bold mb-4"> Backend</h3>
                 <div className="flex flex-wrap gap-2 justify-center">
                   {backendSkills.map((tech, key) => (
