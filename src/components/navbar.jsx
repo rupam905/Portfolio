@@ -4,7 +4,7 @@ const navbar = () => {
   return (
     <div>
       <div className="fixed w-full z-40 top-0 backdrop-blur-lg h-16 flex text-blue-900 justify-evenly items-center border-b-[0.1px] border-slate-600">
-        <div className=" text-2xl font-bold mx-5"><a href="#home">Portfolio</a></div>
+        <div className=" text-2xl font-bold mx-5"><a href="#home">Rupam Dutta</a></div>
 
         <div>
           <div className="hidden md:flex items-center space-x-10 font-semibold text-lg">

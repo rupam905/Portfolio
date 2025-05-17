@@ -8,11 +8,11 @@ const contact = () => {
   };
 
   return (
-    <section id='contact' className='min-h-screen items-center justify-center flex'>
-      <div className='max-w-5xl p-14 mx-auto justify-center'>
+    <section id='contact' className='min-h-screen items-center justify-center flex bg-gray-50'>
+      <div className='max-w-5xl p-14 mx-auto justify-center '>
         <h2 className='font-bold text-4xl pb-16 text-center text-blue-950'>Contact</h2>
         <div className=' gap-14  items-center justify-center'>
-          <div className='p-6 border flex flex-col justify-center rounded-xl shadow hover:border-blue-300 transition-all'>
+          <div className='p-6 border flex flex-col justify-center rounded-xl shadow hover:border-blue-300 transition-all bg-white'>
             <h3 className='text-xl font-bold mb-2'>Get in Touch</h3>
             <p>If you have any questions or would like to connect, feel free to reach out!</p>
             <div className='flex flex-wrap gap-2 mt-4'>

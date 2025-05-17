@@ -2,11 +2,11 @@ import React from 'react'
 
 const About = () => {
   return (
-    <section id='about' className='min-h-[calc(100vh-150px)] flex justify-center items-center flex-col'>
+    <section id='about' className='min-h-[calc(100vh-150px)] flex justify-center items-center flex-col bg-gray-50'>
         <div className='max-w-5xl p-16 '>
             <h2 className='font-bold text-4xl text-center text-blue-950'>About me</h2>
 
-            <div className='text-center mt-5 text-lg max-w-2xl font-medium'>
+            <div className='text-center mt-5 text-lg max-w-2xl font-medium text-gray-600'>
                 <p>Passionate developer with expertise in building scalable web
                 applications and creating innovative solutions.</p>
             </div>

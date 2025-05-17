@@ -7,7 +7,7 @@ const home = () => {
         <div className=" text-5xl font-bold text-center mb-2 text-blue-950">
           Hi, I'm Rupam
         </div>
-        <div className="text-center text-lg max-w-2xl font-medium">
+        <div className="text-center text-lg max-w-2xl font-medium text-gray-500 md:max-w-1xl">
           <p>Aspiring Software Engineer with a strong foundation in Java, Python, and web development.
             Passionate about building scalable applications and eager to contribute innovative solutions in a dynamic team environment.</p>
         </div>
