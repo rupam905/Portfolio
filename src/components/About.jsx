@@ -6,7 +6,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="min-h-[calc(100vh-150px)] flex justify-center items-center flex-col">
+      className="min-h-[calc(100vh-150px)] flex justify-center items-center flex-col bg-gray-50">
       <div className="max-w-3xl px-4 mx-auto">
         <h2 className="font-bold text-4xl text-center text-blue-950">
           About me
