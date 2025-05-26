@@ -62,7 +62,7 @@ public/          # Static public files
 
 ## 📬 Contact
 
-Feel free to reach out via the contact form on the site or by [email](mailto:your.email@example.com).
+Feel free to reach out via the contact form on the site or by [email](mailto:rupamdutta905@gmail.com).
 
 ---
 
