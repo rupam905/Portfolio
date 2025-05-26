@@ -1,12 +1,69 @@
-# React + Vite
+# My Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my personal portfolio website! This site showcases my projects, skills, and experience as a developer.
 
-Currently, two official plugins are available:
+<p align="center">
+  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
+  <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" />
+  
+</p>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- Modern, responsive design
+- Built with [React](https://react.dev/) and [Vite](https://vitejs.dev/)
+- Fast loading and smooth navigation
+- Project gallery with descriptions and links
+- Contact form for easy communication
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Tech Stack
+
+- **Frontend:** React, Tailwind CSS
+
+## 📦 Getting Started
+
+1. **Clone this repository**
+   ```bash
+   git clone https://github.com/your-username/your-repo.git
+   cd your-repo
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Start the development server**
+   ```bash
+   npm run dev
+   ```
+
+4. **Build for production**
+   ```bash
+   npm run build
+   ```
+
+## 📁 Project Structure
+
+```
+src/
+  components/    # Reusable UI components
+  pages/         # Main pages (Home, Projects, Contact, etc.)
+  assets/        # Images and static files
+  App.jsx        # Main app component
+  main.jsx       # Entry point
+public/          # Static public files
+```
+
+## ✨ Customization
+
+- Update your information and projects in the `src` folder.
+- Modify styles in the CSS/SCSS files to personalize the look.
+
+## 📬 Contact
+
+Feel free to reach out via the contact form on the site or by [email](mailto:your.email@example.com).
+
+---
+
+> Made with ❤️ by [Rupam Dutta]
