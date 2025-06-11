@@ -110,7 +110,7 @@ const ContactSection = () => {
             </div>
           </div>
 
-          <div className="bg-card p-8 rounded-lg shadow-md" onSubmit={handleSubmit}>
+          <div className="bg-card p-8 rounded-lg shadow-md">
             <h3 className="text-2xl font-semibold mb-6">Send a message</h3>
 
             <form className="space-y-6" onSubmit={handleSubmit}>
