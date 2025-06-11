@@ -7,16 +7,31 @@ import {
   Phone,
   Send,
   Twitter,
+  X,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useToast } from "../hooks/use-toast";
 import { useState } from "react";
+import emailjs from "emailjs-com";
 const ContactSection = () => {
   const {toast} = useToast()
   const [isSubmitting, setIsSubmitting] = useState(false)
 
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  })
+
+  const SERVICE_ID = "service_cdl7ar6"
+  const TEMPLATE_ID = "template_j9jot9f"
+  const PUBLIC_KEY = "ZaAupZG-rUIXaAVUW"
   const handleSubmit = (e) => {
     e.preventDefault();
+    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, PUBLIC_KEY).then((result) => {
+      setFormData({name: "", email: "", message: ""})
+    })
+    .catch(() => alert("Oops! Something went wrong. Please try again."))
     setIsSubmitting(true)
     setTimeout(() => {toast({title: "Message sent!", description:"Thank you for your message. I'll get back to you soon!"})
     setIsSubmitting(false)
@@ -98,7 +113,7 @@ const ContactSection = () => {
           <div className="bg-card p-8 rounded-lg shadow-md" onSubmit={handleSubmit}>
             <h3 className="text-2xl font-semibold mb-6">Send a message</h3>
 
-            <form className="space-y-6">
+            <form className="space-y-6" onSubmit={handleSubmit}>
               <div>
                 <label
                   htmlFor="name"
@@ -110,8 +125,10 @@ const ContactSection = () => {
                   id="name"
                   name="name"
                   required
+                  value={formData.name}
                   className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-1 focus:ring-primary"
                   placeholder="John Doe"
+                  onChange={(e) => setFormData({...formData, name: e.target.value})}
                 />
               </div>
               <div>
@@ -125,8 +142,10 @@ const ContactSection = () => {
                   id="email"
                   name="email"
                   required
+                  value={formData.email}
                   className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-1 focus:ring-primary"
                   placeholder="john@gmail.com"
+                  onChange={(e) => setFormData({...formData, email: e.target.value})}
                 />
               </div>
 
@@ -140,8 +159,10 @@ const ContactSection = () => {
                   id="name"
                   name="name"
                   required
+                  value={formData.message}
                   className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-1 focus:ring-primary resize-none"
                   placeholder="Leave a message"
+                  onChange={(e) => setFormData({...formData, message: e.target.value})}
                 />
               </div>
               <button

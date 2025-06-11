@@ -8,8 +8,8 @@ const projects = [
       "A great simple clean ui Notes Saving App using React and Tailwind.",
     image: "/projects/NotesApp.png",
     tags: ["React", "TailwindCSS", "Redux toolkit"],
-    demourl: "#",
-    githuburl: "",
+    demourl: "https://notes-saver-livid.vercel.app/",
+    githuburl: "https://github.com/rupam905/NotesSaver",
   },
   {
     id: 2,
@@ -18,8 +18,8 @@ const projects = [
       "Working on it.",
     image: "/projects/comingsoon.jpeg",
     tags: [],
-    demourl: "#",
-    githuburl: "#",
+    demourl: "",
+    githuburl: "",
   },
   {
     id: 3,
@@ -28,8 +28,8 @@ const projects = [
       "Work at progress.",
     image: "/projects/comingsoon.jpeg",
     tags: [],
-    demourl: "#",
-    githuburl: "#",
+    demourl: "",
+    githuburl: "",
   },
 ];
 

@@ -2,19 +2,19 @@ import { useState } from "react";
 import { cn } from "../lib/utils";
 
 const skills = [
-  { name: "HTML/CSS", level: 95, category: "frontend" },
-  { name: "JavaScript", level: 85, category: "frontend" },
-  { name: "React", level: 70, category: "frontend" },
+  { name: "HTML/CSS", category: "frontend" },
+  { name: "JavaScript", category: "frontend" },
+  { name: "React", category: "frontend" },
   //   { name: "TypeScript", level: 85, category: "frontend" },
-  { name: "Tailwind CSS", level: 75, category: "frontend" },
+  { name: "Tailwind CSS", category: "frontend" },
   //   { name: "Next.js", level: 80, category: "frontend" },
-  { name: "Git/GitHub", level: 90, category: "tools" },
-  // { name: "Docker", level: 70, category: "tools" },
-  // { name: "Figma", level: 85, category: "tools" },
-  { name: "VS Code", level: 95, category: "tools" },
-  { name: "Node.js", level: 50, category: "backend" },
-  { name: "Express", level: 50, category: "backend" },
-  { name: "MongoDB", level: 50, category: "backend" },
+  { name: "Git/GitHub", category: "tools" },
+  { name: "Postman", category: "tools" },
+  { name: "Figma", category: "tools" },
+  { name: "VS Code", category: "tools" },
+  { name: "Node.js", category: "backend" },
+  { name: "Express", category: "backend" },
+  { name: "MongoDB", category: "backend" },
   //   { name: "PostgreSQL", level: 65, category: "backend" },
   //   { name: "GraphQL", level: 60, category: "backend" },
 ];
@@ -52,21 +52,21 @@ const SkillsSection = () => {
             <div
               key={key}
               className="bg-card p-6 rounded-lg shadow-xs card-hover">
-              <div className="text-left mb-4">
-                <h3 className="font-semibold text-lg">{skill.name}</h3>
+              <div className="py-2">
+                <h3 className="font-semibold flex justify-center text-lg">{skill.name}</h3>
               </div>
-              <div className="w-full bg-secondary/50 h-2 rounded-full overflow-hidden">
+              {/* <div className="w-full bg-secondary/50 h-2 rounded-full overflow-hidden">
                 <div
                   className="bg-primary h-2 rounded-full origin-left animate-[grow_1.5s_ease-out]"
                   style={{ width: skill.level + "%" }}
                 />
-              </div>
+              </div> */}
 
-              <div className="text-right mt-1">
+              {/* <div className="text-right mt-1">
                 <span className="text-sm text-muted-foreground">
                   {skill.level}%
                 </span>
-              </div>
+              </div> */}
             </div>
           ))}
         </div>
