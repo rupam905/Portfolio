@@ -7,29 +7,28 @@ const projects = [
     description:
       "A great simple clean ui Notes Saving App using React and Tailwind.",
     image: "/projects/NotesApp.png",
-    tags: ["React", "TailwindCSS", "Redux toolkit"],
+    tags: ["React", "TailwindCSS", "Redux"],
     demourl: "https://notes-saver-livid.vercel.app/",
     githuburl: "https://github.com/rupam905/NotesSaver",
   },
   {
     id: 2,
-    title: "Coming Soon!",
+    title: "Blog site",
     description:
-      "Working on it.",
-    image: "/projects/comingsoon.jpeg",
-    tags: [],
-    demourl: "",
-    githuburl: "",
+      "A full-stack blog app enabling users to create, edit, and manage posts with seamless UI and real-time data handling.",
+    image: "/projects/blogapp.png",
+    tags: ["Node.js", "Express.js", "MongoDB"],
+    // demourl: "",
+    // githuburl: "",
   },
   {
     id: 3,
     title: "Coming soon!",
-    description:
-      "Work at progress.",
+    description: "Work at progress.",
     image: "/projects/comingsoon.jpeg",
     tags: [],
-    demourl: "",
-    githuburl: "",
+    // demourl: "",
+    // githuburl: "",
   },
 ];
 
@@ -64,30 +63,41 @@ const ProjectsSection = () => {
                     </span>
                   ))}
                 </div>
-              
 
-              <h3 className="text-xl font-semibold mb-1"> {project.title}</h3>
-              <p className="text-foreground/80 text-sm mb-4">
-                {project.description}
-              </p>
+                <h3 className="text-xl font-semibold mb-1"> {project.title}</h3>
+                <p className="text-foreground/80 text-sm mb-4">
+                  {project.description}
+                </p>
 
-              <div className="flex justify-between items-center">
-                <div className="flex space-x-3 ">
-                  <a href={project.demourl} target="_blank" className="text-foreground/80 hover:text-primary transition-colors duration-300"><ExternalLink size={20}/></a>
-                  <a href={project.githuburl} target="_blank" className="text-foreground/80 hover:text-primary transition-colors duration-300"><Github size={20}/></a>
+                <div className="flex justify-between items-center">
+                  <div className="flex space-x-3 ">
+                    <a
+                      href={project.demourl}
+                      target="_blank"
+                      className="text-foreground/80 hover:text-primary transition-colors duration-300">
+                      <ExternalLink size={20} />
+                    </a>
+                    <a
+                      href={project.githuburl}
+                      target="_blank"
+                      className="text-foreground/80 hover:text-primary transition-colors duration-300">
+                      <Github size={20} />
+                    </a>
+                  </div>
                 </div>
-              </div>
               </div>
             </div>
           ))}
         </div>
 
-          <div className="text-center mt-12">
-          <a href="https://github.com/rupam905" target="_blank" className="cosmic-button w-fit flex items-center mx-auto gap-2">
-            Check My Github <ArrowRight size={16}/>
+        <div className="text-center mt-12">
+          <a
+            href="https://github.com/rupam905"
+            target="_blank"
+            className="cosmic-button w-fit flex items-center mx-auto gap-2">
+            Check My Github <ArrowRight size={16} />
           </a>
-          </div>
-
+        </div>
       </div>
     </section>
   );
