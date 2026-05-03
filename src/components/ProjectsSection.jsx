@@ -3,32 +3,34 @@ import { ArrowRight, ExternalLink, Github } from "lucide-react";
 const projects = [
   {
     id: 1,
-    title: "Notes Saver App",
+    title: "Blog site",
     description:
-      "A great simple clean ui Notes Saving App using React and Tailwind.",
-    image: "/projects/NotesApp.png",
-    tags: ["React", "TailwindCSS", "Redux"],
-    demourl: "https://notes-saver-livid.vercel.app/",
-    githuburl: "https://github.com/rupam905/NotesSaver",
+      "A MERN stack blog platform with Gemini AI integration that generates blog content instantly. Users can create, edit, and manage posts with a clean UI and real-time data handling.",
+    image: "/projects/QuickBlog.png",
+    tags: ["React", "Node.js", "Express.js", "MongoDB", "Gemini API"],
+    demourl: "https://quick-blog-ai-lilac.vercel.app/",
+    githuburl: "https://github.com/rupam905/ai-blog",
   },
   {
     id: 2,
-    title: "Blog site",
+    title: "AI Disease Prediction",
     description:
-      "A full-stack blog app enabling users to create, edit, and manage posts with seamless UI and real-time data handling.",
-    image: "/projects/blogapp.png",
-    tags: ["Node.js", "Express.js", "MongoDB"],
-    // demourl: "",
-    // githuburl: "",
+      "A machine learning web app that predicts diseases based on user-input symptoms, built using Python and trained ML models with a clean, responsive frontend.",
+    image: "/projects/Havenhealth.png",
+    tags: ["HTML", "CSS", "JavaScript", "FastAPI", "ML", "MongoDB"],
+    // demourl: "https://notes-saver-livid.vercel.app/",
+    githuburl: "https://github.com/rupam905/Disease-prediction",
   },
+
   {
     id: 3,
-    title: "Coming soon!",
-    description: "Work at progress.",
-    image: "/projects/comingsoon.jpeg",
-    tags: [],
+    title: "Library Management System",
+    description:
+      "A full-stack library management system to handle book inventory, member records, and borrowing operations with a fast REST API backend.",
+    image: "/projects/Library.png",
+    tags: ["HTML", "CSS", "JavaScript", "FastAPI", "SQLite"],
     // demourl: "",
-    // githuburl: "",
+    githuburl: "https://github.com/rupam905/Library-management-system",
   },
 ];
 
@@ -58,7 +60,7 @@ const ProjectsSection = () => {
               <div className="p-6">
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tags.map((tag) => (
-                    <span className="px-2 py-1 text-xs font-medium border rounded-full bg-secondary text-secondary-foreground">
+                    <span key={tag} className="px-2 py-1 text-xs font-medium border rounded-full bg-secondary text-secondary-foreground">
                       {tag}
                     </span>
                   ))}

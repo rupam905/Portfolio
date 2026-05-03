@@ -122,6 +122,10 @@
   }
 }
 
+@utility text-gradient {
+  @apply bg-linear-to-r from-primary to-purple-400 bg-clip-text text-transparent;
+}
+
 @utility text-glow {
   @apply relative;
   text-shadow: 0 0 10px rgba(167, 139, 250, 0.5);

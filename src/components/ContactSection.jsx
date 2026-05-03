@@ -26,17 +26,20 @@ const ContactSection = () => {
   
   const handleSubmit = (e) => {
     e.preventDefault();
+    setIsSubmitting(true);
     emailjs.sendForm(
-      import.meta.env.VITE_SERVICE_ID, 
-      import.meta.env.VITE_TEMPLATE_ID, e.target, 
-      import.meta.env.VITE_PUBLIC_KEY).then((result) => {
-      setFormData({name: "", email: "", message: ""})
-    })
-    .catch(() => alert("Oops! Something went wrong. Please try again."))
-    setIsSubmitting(true)
-    setTimeout(() => {toast({title: "Message sent!", description:"Thank you for your message. I'll get back to you soon!"})
-    setIsSubmitting(false)
-    }, 1500);
+      import.meta.env.VITE_SERVICE_ID,
+      import.meta.env.VITE_TEMPLATE_ID,
+      e.target,
+      import.meta.env.VITE_PUBLIC_KEY
+    ).then(() => {
+      setFormData({ name: "", email: "", message: "" });
+      toast({ title: "Message sent!", description: "Thank you for your message. I'll get back to you soon!" });
+    }).catch(() => {
+      toast({ title: "Error!", description: "Oops! Something went wrong. Please try again.", variant: "destructive" });
+    }).finally(() => {
+      setIsSubmitting(false);
+    });
   };
   return (
     <section id="contact" className="py-24 px-4 relative bg-secondary/30">
