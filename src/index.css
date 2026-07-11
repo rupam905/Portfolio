@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --color-border: hsl(var(--border));
   --color-background: hsl(var(--background));
@@ -9,6 +11,11 @@
   --color-primary-foreground: hsl(var(--primary-foreground));
 
   --color-card: hsl(var(--card));
+
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  --color-ring: hsl(var(--ring));
+  --color-input: hsl(var(--input));
 
   --animate-float: float 6s ease-in-out infinite;
   --animate-pulse-subtle: pulse-subtle 4s ease-in-out infinite;
@@ -64,15 +71,27 @@
 
 @layer base {
   :root {
-    --background: 210 40% 98%;
-    --foreground: 222 47% 11%;
+    --background: 230 30% 97%;     /* warm light blue-grey */
+    --foreground: 225 40% 12%;     /* rich dark navy */
 
-    --card: 0 0% 100%;
+    --card: 0 0% 100%;             /* clean white cards */
 
-    --primary: 250 47% 60%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 252 80% 57%;        /* vivid indigo */
+    --primary-foreground: 0 0% 100%;
 
-    --border: 214 32% 91%;
+    --border: 230 25% 88%;         /* soft blue-grey border */
+
+    --secondary: 240 20% 94%;      /* subtle lavender tint */
+    --secondary-foreground: 225 40% 20%;
+
+    --muted: 230 20% 93%;
+    --muted-foreground: 225 20% 40%;
+
+    --accent: 250 70% 96%;         /* pale indigo accent surface */
+    --accent-foreground: 225 40% 20%;
+
+    --ring: 252 80% 57%;
+    --input: 230 25% 88%;
   }
 
   .dark {
@@ -85,6 +104,12 @@
     --primary-foreground: 213 31% 91%;
 
     --border: 217 33% 20%;
+
+    --accent: 250 30% 14%;
+    --accent-foreground: 213 31% 91%;
+
+    --ring: 250 65% 65%;
+    --input: 217 33% 20%;
   }
 
   * {
@@ -98,6 +123,13 @@
   body {
     @apply bg-background text-foreground transition-colors duration-300;
     font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  /* Hide default cursor on desktop to only show the custom cursor */
+  @media (min-width: 768px) {
+    * {
+      cursor: none !important;
+    }
   }
 }
 
@@ -132,7 +164,7 @@
 }
 
 @utility card-hover {
-  @apply transition-transform duration-300 hover:scale-[1.02] hover:shadow-lg;
+  @apply transition-all duration-300 hover:scale-[1.02] hover:shadow-xl;
 }
 
 @utility gradient-border {
@@ -144,7 +176,7 @@
 
 @utility cosmic-button {
   @apply px-6 py-2 rounded-full bg-primary text-primary-foreground font-medium 
-         transition-all duration-300 hover:shadow-[0_0_10px_rgba(139,92,246,0.5)]
+         transition-all duration-300 hover:shadow-[0_0_14px_rgba(109,40,217,0.5)]
          hover:scale-105 active:scale-95;
 }
 
@@ -157,6 +189,20 @@
   @apply absolute bg-linear-to-r from-white via-white to-transparent rounded-full;
   box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.3);
 }
+
+@utility cosmic-glow {
+  @apply relative;
+  box-shadow: 0 0 20px 2px rgba(139, 92, 246, 0.3);
+}
+
+@utility card-surface {
+  @apply bg-card rounded-xl border border-border/70 shadow-[0_1px_2px_rgba(15,23,42,0.04),0_16px_32px_-16px_rgba(79,70,229,0.18)]
+         dark:border-primary/10 dark:shadow-sm
+         hover:shadow-[0_1px_2px_rgba(15,23,42,0.04),0_20px_40px_-14px_rgba(79,70,229,0.28)]
+         dark:hover:shadow-[0_4px_24px_rgba(139,92,246,0.2)]
+         transition-all duration-300;
+}
+
 
 #root {
   max-width: 100%;
