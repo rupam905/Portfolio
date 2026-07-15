@@ -7,12 +7,12 @@ const education = [
   {
     degree: "Master of Computer Applications",
     institution: "Techno India University",
-    duration: "Oct 2024 – 2026",
+    duration: "October 2024 – July 2026",
   },
   {
     degree: "Bachelor of Computer Applications",
     institution: "Techno India Institute of Technology",
-    duration: "Jun 2021 – Jul 2024",
+    duration: "June 2021 – July 2024",
   },
 ];
 
